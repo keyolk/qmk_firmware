@@ -43,11 +43,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |------+------+------+------+------+------+------+------+------+------+------+------|
  * | Tab  |   Q  |   W  |   E  |   R  |   T  |   Y  |   U  |   I  |   O  |   P  | Del  |
  * |------+------+------+------+------+-------------+------+------+------+------+------|
- * | LCtl |   A  |   S  |   D  |   F  |   G  |   H  |   J  |   K  |   L  |   ;  |Enter |
+ * | LCtl |   A  |   S  |   D  |   F  |   G  |   H  |   J  |   K  |   L  |   ;  | Enter|
  * |------+------+------+------+------+------|------+------+------+------+------+------|
- * | Shift|   Z  |   X  |   C  |   V  |   B  |   N  |   M  |   ,  |   .  |   /  |Shift |
+ * | LShft|   Z  |   X  |   C  |   V  |   B  |   N  |   M  |   ,  |   .  |   /  | RShft|
  * |------+------+------+------+------+------+------+------+------+------+------+------|
- * | Esc  | LGUI | RAlt | LAlt |Lower |    Space    |Raise | Left | Down |  Up  |Right |
+ * | Esc  | LGUI | RAlt | LAlt |Lower |    Space    |Raise | Left | Down |  Up  | Right|
  * `-----------------------------------------------------------------------------------'
  */
 [_QWERTY] = LAYOUT_preonic_grid( \
@@ -102,22 +102,22 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 /* Lower
  * ,-----------------------------------------------------------------------------------.
- * |   !  |   @  |   #  |   $  |   %  |  ^   |  &   | *    |   (  |   )  |   `  |  ~   |
+ * |   !  |   @  |   #  |   $  |   %  |  ^   |  &   | *    |   (  |   )  |   `  | Bksp |
  * |------+------+------+------+------+-------------+------+------+------+------+------|
- * | Tab  | Enter|   =  |   ^  |   %  |  7   |  8   | 9    |   [  |   ]  |   -  |  _   |
+ * | Tab  | Enter|   =  |   ^  |   %  |  7   |  8   | 9    |   [  |   ]  |   -  | Del  |
  * |------+------+------+------+------+-------------+------+------+------+------+------|
- * | LCtl |   !  |   ^  |   *  |   /  |  4   |  5   | 6    |   {  |   }  |   =  |  +   |
+ * | LCtl |   !  |   ^  |   *  |   /  |  4   |  5   | 6    |   {  |   }  |   =  | Enter|
  * |------+------+------+------+------+------|------+------+------+------+------+------|
- * | Shift|   &  |   |  |   +  |   -  |  1   |  2   | 3    |   <  |  >   |   \  |  |   |
+ * | LShft|   |  |   &  |   +  |   -  |  1   |  2   | 3    |   <  |  >   |   \  | RShft|
  * |------+------+------+------+------+------+------+------+------+------+------+------|
- * | Esc  | LGUI | RCtl | LAlt |Lower |  0          |Raise | home | pdown| pup  | End  |
+ * | Esc  | LGUI | LCtl | LAlt |Lower |  0          |Raise | home | pdown| pup  | End  |
  * `-----------------------------------------------------------------------------------'
  */
 [_LOWER] = LAYOUT_preonic_grid( \
-  KC_EXLM, KC_AT,    KC_HASH, KC_DLR,  KC_PERC,  KC_CIRC, KC_AMPR, KC_ASTR, KC_LPRN, KC_RPRN, KC_GRV,   KC_TILD, \
-  KC_TAB,  KC_ENT,   KC_PEQL, KC_CIRC, KC_PERC,  KC_P7,   KC_P8,   KC_P9,   KC_LBRC, KC_RBRC, KC_MINUS, KC_UNDS, \
-  KC_LCTL, KC_EXLM,  KC_CIRC, KC_ASTR, KC_SLSH,  KC_P4,   KC_P5,   KC_P6,   KC_LCBR, KC_RCBR, KC_EQUAL, KC_PLUS, \
-  KC_LSFT, KC_AMPR,  KC_PIPE, KC_PLUS, KC_MINUS, KC_P1,   KC_P2,   KC_P3,   KC_LABK, KC_RABK, KC_BSLS,  KC_PIPE, \
+  KC_EXLM, KC_AT,    KC_HASH, KC_DLR,  KC_PERC,  KC_CIRC, KC_AMPR, KC_ASTR, KC_LPRN, KC_RPRN, KC_GRV,   KC_BSPC, \
+  KC_TAB,  KC_ENT,   KC_PEQL, KC_CIRC, KC_PERC,  KC_P7,   KC_P8,   KC_P9,   KC_LBRC, KC_RBRC, KC_MINUS, KC_DEL, \
+  KC_LCTL, KC_EXLM,  KC_CIRC, KC_ASTR, KC_SLSH,  KC_P4,   KC_P5,   KC_P6,   KC_LCBR, KC_RCBR, KC_EQUAL, KC_ENT, \
+  KC_LSFT, KC_PIPE,  KC_AMPR, KC_PLUS, KC_MINUS, KC_P1,   KC_P2,   KC_P3,   KC_LABK, KC_RABK, KC_BSLS,  KC_RSFT, \
   KC_ESC,  KC_LGUI, KC_LCTL, KC_LALT, _______,  KC_P0,   KC_P0,   _______, KC_HOME, KC_PGDN, KC_PGUP,  KC_END   \
 ),
 
@@ -127,9 +127,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |------+------+------+------+------+------+------+------+------+------+------+------|
  * | Tab  | Esc  |      |      |      |      |      |      |  Ins | Pscr | Slck | Paus |
  * |------+------+------+------+------+-------------+------+------+------+------+------|
- * | Ctrl |      |      |      |      |      |      |      |      |      | Caps | Play |
+ * | LCtl |      |      |      |      |      |      |      |      |      | Caps | Play |
  * |------+------+------+------+------+------|------+------+------+------+------+------|
- * | Shift|      |      |      |      |      |      |      |      |      | NLCK | Mute |
+ * | LShft|      |      |      |      |      |      |      |      |      | NLCK | Mute |
  * |------+------+------+------+------+------+------+------+------+------+------+------|
  * | Esc  | LGUI | RCtrl| RAlt |Lower |             |Raise | MPrv | Vol- | Vol+ | Mnxt |
  * `-----------------------------------------------------------------------------------'
